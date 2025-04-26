@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
+import snakeReducer from './features/snakeSlice/snakeSlice'
 
-export const store = configureStore({
-  reducer: {},
+export default configureStore({
+  reducer: {
+    snakeSlice : snakeReducer,
+  },
 })
-
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
